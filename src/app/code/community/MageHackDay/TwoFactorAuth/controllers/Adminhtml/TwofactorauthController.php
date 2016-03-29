@@ -1,7 +1,7 @@
 <?php
 
 /**
- * adminhtml controller to enforce Two Factor Authentication
+ * adminhtml controller to enforce Two-Factor Authentication
  *
  * @category    MageHackDay
  * @package     MageHackDay_TwoFactorAuth
@@ -240,7 +240,7 @@ class MageHackDay_TwoFactorAuth_Adminhtml_TwofactorauthController extends Mage_A
                     return;
                 }
 
-                // Do not require 2-Factor-Authentication on this computer in the future
+                // Do not require Two-Factor Authentication on this computer in the future
                 $rememberMe = (bool) $this->getRequest()->getPost('remember_me', FALSE);
                 if ($rememberMe) {
                     try {

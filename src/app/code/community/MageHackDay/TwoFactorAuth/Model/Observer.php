@@ -20,7 +20,7 @@ class MageHackDay_TwoFactorAuth_Model_Observer
 
     /**
      * Listens to the admin_user_authenticate_after Event and checks whether the user has access to areas that are configured
-     * to be protected by Two Factor Auth. If so, send the user to either add a Two Factor Auth to their Account, or enter a
+     * to be protected by Two-Factor Auth. If so, send the user to either add a Two-Factor Auth to their Account, or enter a
      * code from their connected Auth provider
      *
      * @event admin_user_authenticate_after
@@ -74,7 +74,7 @@ class MageHackDay_TwoFactorAuth_Model_Observer
     /**
      * Listens for the controller_action_postdispatch_adminhtml Event to
      * check if an Admin that was sent to either:
-     *   (a) My Account to associate a Two Factor Auth, or
+     *   (a) My Account to associate a Two-Factor Auth, or
      *   (b) interstitial page to enter their TFA value
      * is attempting to navigate away without performing the necessary TFA action
      *

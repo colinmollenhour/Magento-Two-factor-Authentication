@@ -29,7 +29,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><?php echo Mage::helper('adminhtml')->__('Two Factor Authentication'); ?></title>
+    <title><?php echo Mage::helper('adminhtml')->__('Two-Factor Authentication'); ?></title>
     <link type="text/css" rel="stylesheet" href="<?php echo $this->getSkinUrl('reset.css'); ?>" media="all" />
     <link type="text/css" rel="stylesheet" href="<?php echo $this->getSkinUrl('boxes.css'); ?>" media="all" />
     <link type="text/css" rel="stylesheet" href="<?php echo $this->getSkinUrl('twofactorauth.css'); ?>" media="all" />
@@ -93,7 +93,7 @@
                         <input type="text" id="security_code" name="security_code" value="" class="required-entry input-text tfa__input-text" /><br />
                         <div class="remember-me">
                             <p><input type="checkbox" title="<?php echo Mage::helper('twofactorauth')->__('Remember Me') ?>" id="remember-me" name="remember_me" />&nbsp;<label for="remember-me"><?php echo Mage::helper('twofactorauth')->__('Remember Me') ?></label></p>
-                            <p><?php echo Mage::helper('twofactorauth')->__('Do not require 2-Factor-Authentication on this computer for a period of time set by the administrator. (Do not use this feature on public computers.)') ?></p>
+                            <p><?php echo Mage::helper('twofactorauth')->__('Do not require Two-Factor Authentication on this computer for a period of time set by the administrator. (Do not use this feature on public computers.)') ?></p>
                         </div>
 
                         <input type="hidden" name="qr_secret" value="<?php echo $this->getQrCodeSecret() ?>" />
