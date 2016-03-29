@@ -110,7 +110,7 @@ class MageHackDay_TwoFactorAuth_Helper_Auth extends Mage_Core_Helper_Abstract
      */
     public function generateCookie()
     {
-        return sha1(Mage::helper('core')->getRandomString(20), FALSE);
+        return Mage::helper('core')->getRandomString(20);
     }
 
     /**
@@ -133,7 +133,7 @@ class MageHackDay_TwoFactorAuth_Helper_Auth extends Mage_Core_Helper_Abstract
         } else {
             $_cookie = $cookie;
         }
-        Mage::getSingleton('core/cookie')->set(self::TWO_FACTOR_AUTH_COOKIE, $_cookie, $expire);
+        Mage::getSingleton('core/cookie')->set(self::TWO_FACTOR_AUTH_COOKIE, $_cookie, $expire, NULL, NULL, TRUE, TRUE);
     }
 
     /**

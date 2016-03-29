@@ -52,7 +52,7 @@
         <form method="post" action="<?php echo $this->getUrl('adminhtml/twofactorauth/verify') ?>" id="loginForm">
             <fieldset class="login-form">
                 <input name="form_key" type="hidden" value="<?php echo $this->getFormKey(); ?>" />
-                <h2><?php echo Mage::helper('twofactorauth')->__('Please enter Google Authenticator verification code'); ?></h2>
+                <h2><?php echo Mage::helper('twofactorauth')->__('Please enter Two-Factor Authentication code'); ?></h2>
                 <div class="account-name">
                     <?php echo $this->__('Account Name: %s', Mage::helper('twofactorauth/auth')->getStoreName()) ?>
                 </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div>
                     <p><input type="checkbox" title="<?php echo Mage::helper('twofactorauth')->__('Remember Me') ?>" id="remember-me" name="remember_me" />&nbsp;<label for="remember-me"><?php echo Mage::helper('twofactorauth')->__('Remember Me') ?></label></p>
-                    <p><?php echo Mage::helper('twofactorauth')->__('Do not require 2-Factor-Authentication on this computer for a period of time set by the administrator. (Do not use this feature on public computers.)') ?></p>
+                    <p><?php echo Mage::helper('twofactorauth')->__('Do not require Two-Factor Authentication on this computer %s. (Do not use this feature on public computers.)', $this->getRememberMePeriod()) ?></p>
                 </div>
                 <?php if ($this->hasSecretQuestion()): ?>
                     <a class="left" href="<?php echo $this->getUrl('adminhtml/twofactorauth/question'); ?>"><?php echo Mage::helper('twofactorauth')->__('Use a One Time Security Question'); ?></a>

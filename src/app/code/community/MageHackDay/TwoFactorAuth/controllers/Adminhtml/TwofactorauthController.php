@@ -503,7 +503,11 @@ class MageHackDay_TwoFactorAuth_Adminhtml_TwofactorauthController extends Mage_A
         return !! $user->getTwofactorToken();
     }
 
-    protected function _getCookieExpiry() {
+    /**
+     * @return int
+     */
+    protected function _getCookieExpiry()
+    {
         return Mage::helper('twofactorauth')->getRememberMeDuration();
     }
 }
